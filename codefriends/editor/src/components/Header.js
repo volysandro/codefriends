@@ -11,6 +11,9 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: "100%",
+    backgroundColor: theme.palette.common.white,
+    color: theme.palette.common.black,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -25,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: fade(theme.palette.common.black, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(theme.palette.common.black, 0.25),
     },
     marginLeft: 0,
     width: '100%',
@@ -68,7 +71,9 @@ export default function SearchAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="absolute" classes={{
+        root: classes.root,
+      }}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -79,7 +84,7 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            CodeFriends Editor
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

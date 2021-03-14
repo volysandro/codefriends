@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'challenges',
     'api',
+    'languages',
 ]
 
 MIDDLEWARE = [

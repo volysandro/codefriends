@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('editor/', include('editor.urls')),
     path('api/', include('api.urls')),
+    path('languages/', include('languages.urls'))
 ]

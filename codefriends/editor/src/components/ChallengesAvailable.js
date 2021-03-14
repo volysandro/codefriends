@@ -15,6 +15,7 @@ class ChallengesAvailable extends React.Component {
         position: "absolute",
         left: "80%",
         width: "20%",
+        top: "64px",
     }
     this.cards_style = {
         width: "95%",
